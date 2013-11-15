@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=FW05;Initial Catalog=Genisys</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:DataSourceID>cfb891c6-3a1c-4753-bd3e-a6fc3ed6ea4d</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
   <DataSets>
     <DataSet Name="dsIPAWSummary">
       <SharedDataSet>
@@ -6198,7 +6209,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dsIPAWSummary</DataSetName>
-            <Top>1.09167in</Top>
+            <Top>1.13807in</Top>
             <Height>13.29887in</Height>
             <Width>8.52499in</Width>
             <Style>
@@ -6207,42 +6218,6 @@
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="Textbox198">
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value EvaluationMode="Constant">International Project Assessment Worksheet For [</Value>
-                    <Style>
-                      <FontFamily>KievitOT</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox198</rd:DefaultName>
-            <Top>0.15833in</Top>
-            <Left>0.33333in</Left>
-            <Height>0.40277in</Height>
-            <Width>4.79in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox199">
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
@@ -6264,11 +6239,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox199</rd:DefaultName>
-            <Top>0.72777in</Top>
-            <Left>0.69722in</Left>
+            <Top>0.49917in</Top>
+            <Left>0.72222in</Left>
             <Height>0.25in</Height>
             <Width>1.25in</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border />
               <VerticalAlign>Middle</VerticalAlign>
@@ -6297,10 +6272,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox268</rd:DefaultName>
-            <Top>0.72777in</Top>
+            <Top>0.49917in</Top>
             <Height>0.25in</Height>
-            <Width>0.74167in</Width>
-            <ZIndex>3</ZIndex>
+            <Width>0.72in</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -6311,16 +6286,16 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox135">
+          <Textbox Name="Textbox198">
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!ProjectName.Value, "dsIPAWSummary") &amp;"]"</Value>
+                    <Value>="International Project Assessment Worksheet For [" &amp;""&amp; First(Fields!ProjectName.Value,"dsIPAWSummary") &amp;"]"</Value>
                     <Style>
                       <FontFamily>KievitOT</FontFamily>
-                      <FontSize>14pt</FontSize>
+                      <FontSize>16pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
@@ -6328,16 +6303,15 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Left</TextAlign>
+                  <TextAlign>Center</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox135</rd:DefaultName>
-            <Top>0.15833in</Top>
-            <Left>4.8625in</Left>
+            <rd:DefaultName>Textbox198</rd:DefaultName>
+            <Top>0.0464in</Top>
             <Height>0.40277in</Height>
-            <Width>3.37916in</Width>
-            <ZIndex>4</ZIndex>
+            <Width>8.52499in</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -6348,14 +6322,14 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>14.59068in</Height>
+        <Height>14.48335in</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>8.725in</Width>
+      <Width>8.52499in</Width>
       <Page>
         <PageHeight>17in</PageHeight>
         <PageWidth>11in</PageWidth>
@@ -6370,7 +6344,7 @@
   <ReportParameters>
     <ReportParameter Name="IPAWID">
       <DataType>Integer</DataType>
-      <Prompt>Enter IPAWID:</Prompt>
+      <Prompt>IPAWID</Prompt>
     </ReportParameter>
   </ReportParameters>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>

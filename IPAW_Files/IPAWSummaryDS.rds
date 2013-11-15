@@ -4,5 +4,5 @@
     <Extension>SQL</Extension>
     <ConnectString>Data Source=FW05;Initial Catalog=Genisys</ConnectString>
   </ConnectionProperties>
-  <DataSourceID>b5913303-3421-4e5a-9b3e-ae8cdfe2bbe8</DataSourceID>
+  <DataSourceID>65ca2f72-11d0-4b2f-917e-243a226a906f</DataSourceID>
 </RptDataSource>
