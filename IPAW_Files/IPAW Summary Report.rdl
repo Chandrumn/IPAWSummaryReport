@@ -2036,7 +2036,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.22033in</Height>
+                  <Height>0.26674in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2173,6 +2173,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -6210,8 +6211,11 @@
             </TablixRowHierarchy>
             <DataSetName>dsIPAWSummary</DataSetName>
             <Top>1.13807in</Top>
-            <Height>13.29887in</Height>
+            <Height>13.34528in</Height>
             <Width>8.52499in</Width>
+            <Visibility>
+              <Hidden>=IIF(First(Fields!SubmitterID.Value, "dsIPAWSummary") IS NOTHING,TRUE,FALSE)</Hidden>
+            </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -6244,6 +6248,9 @@
             <Height>0.25in</Height>
             <Width>1.25in</Width>
             <ZIndex>1</ZIndex>
+            <Visibility>
+              <Hidden>=IIF(First(Fields!SubmitterID.Value, "dsIPAWSummary") IS NOTHING,TRUE,FALSE)</Hidden>
+            </Visibility>
             <Style>
               <Border />
               <VerticalAlign>Middle</VerticalAlign>
@@ -6258,7 +6265,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Report Run:</Value>
+                    <Value EvaluationMode="Constant">Report Run:</Value>
                     <Style>
                       <FontFamily>KievitOT</FontFamily>
                       <FontSize>8pt</FontSize>
@@ -6276,6 +6283,9 @@
             <Height>0.25in</Height>
             <Width>0.72in</Width>
             <ZIndex>2</ZIndex>
+            <Visibility>
+              <Hidden>=IIF(First(Fields!SubmitterID.Value, "dsIPAWSummary") IS NOTHING,TRUE,FALSE)</Hidden>
+            </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -6312,11 +6322,54 @@
             <Height>0.40277in</Height>
             <Width>8.52499in</Width>
             <ZIndex>3</ZIndex>
+            <Visibility>
+              <Hidden>=IIF(First(Fields!SubmitterID.Value, "dsIPAWSummary") IS NOTHING,TRUE,FALSE)</Hidden>
+            </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
               <VerticalAlign>Middle</VerticalAlign>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Constant">Invalid IPAW ID,Please Enter the Valid IPAW ID.</Value>
+                    <Style>
+                      <FontFamily>kievitOT</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>3.33333in</Top>
+            <Left>4.36667in</Left>
+            <Height>0.25in</Height>
+            <Width>2.80833in</Width>
+            <ZIndex>4</ZIndex>
+            <Visibility>
+              <Hidden>=IIF(First(Fields!SubmitterID.Value, "dsIPAWSummary") IS NOTHING,FALSE,TRUE)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
